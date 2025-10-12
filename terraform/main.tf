@@ -5,8 +5,7 @@ provider "aws" {
 resource "aws_instance" "demo" {
   ami           = "ami-0c55b159cbfafe1f0" # Example Ubuntu AMI
   instance_type = "t2.micro"
-  key_name      = "my-key"
-
+  key_name      = "key-pair-nti-lab1"
   tags = {
     Name = "jenkins-ec2"
   }
