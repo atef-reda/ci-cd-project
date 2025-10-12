@@ -33,7 +33,9 @@ stage('Update Ansible Inventory') {
                 // Write inventory file in ansible directory
                 sh """
                     echo "[ec2]" > ../ansible/inventory.ini
-                    echo "${ip} ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/my-key.pem" >> ../ansible/inventory.ini
+                    
+
+                    echo "${ip} ansible_user=ubuntu ansible_ssh_private_key_file=/var/jenkins_home/.ssh/key-pair-nti-lab1.pem" >> ../ansible/inventory.ini
                 """
             }
         }
