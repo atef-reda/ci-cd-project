@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo" {
-  ami           = "ami-0c55b159cbfafe1f0" # Example Ubuntu AMI
+  ami           = "ami-00211ea7561f4b133" #  Ubuntu AMI
   instance_type = "t2.micro"
   key_name      = "key-pair-nti-lab1"
   tags = {
