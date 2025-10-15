@@ -1,6 +1,12 @@
 pipeline {
     agent any
-
+    parameters {
+        booleanParam(
+            name: 'DESTROY',
+            defaultValue: false,
+            description: 'Check this if you want to destroy the infrastructure after running.'
+        )
+    }
     environment {
         AWS_ACCESS_KEY_ID = credentials('aws-access-key')
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
