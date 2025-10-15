@@ -11,7 +11,3 @@ resource "aws_instance" "demo" {
   }
 }
 
-output "instance_ip" {
-  value = aws_instance.demo.public_ip
-}
-
